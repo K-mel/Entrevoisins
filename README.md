@@ -12,6 +12,7 @@ Entrevoisins est une application qui  permet à des personnes d’un même quart
 ======================================
 
 ### 1. Téléchargez le code du projet, de préférence avec git clone
+![git_clone_entrevoisins.jpg](git_clone_entrevoisins.jpg)
 
 
 ### 2. Ouvrez Android Studio et cliquez sur "Check out project from Version Control" et cliquez sur Git.
