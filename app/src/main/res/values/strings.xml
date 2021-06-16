@@ -3,4 +3,20 @@
     <string name="tab_neighbour_title">My neighbours</string>
     <string name="tab_favorites_title">Favorites</string>
     <string name="activity_new_neighbour">New neighbour</string>
+    <string name="activity_profile_name">Prenom</string>
+    <string name="activity_profile_describe">A propos de moi</string>
+    <string name="activity_profile_location">Ville</string>
+    <string name="activity_profile_tel">00.00.00.00.00</string>
+    <string name="activity_profile_fb">www.facebook.fr/prenom</string>
+    <string name="toast_not_fav">Le voisin n\'est plus dans vos favoris</string>
+    <string name="toast_fav">Le voisin a été ajouté dans vos favoris</string>
+    <string name="activity_describe">Lorem Ipsum A Propos de moi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="internet">internet</string>
+    <string name="phone">phone</string>
+    <string name="location">location</string>
+    <string name="star">star</string>
+    <string name="retour">retour</string>
+    <string name="profile">profile</string>
 </resources>
