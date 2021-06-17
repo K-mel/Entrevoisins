@@ -15,7 +15,7 @@ Entrevoisins est une application qui  permet à des personnes d’un même quart
 ![git_clone_entrevoisins.png](git_clone_entrevoisins.png)
 
 
-### 2. Ouvrez Android Studio et cliquez sur "Check out project from Version Control" et cliquez sur Git.
+### 2. Ouvrez Android Studio et cliquez sur "Get from Version Control" et cliquez sur Git.
 ### 3. Coller l'url du dépôt git dans le champ "URL".
 ### 4. Si besoin, modifiez le dossier d'installation du dépôt dans le champ "Directory".
 ![git_Version_control_entrevoisins.png](git_Version_control_entrevoisins.png)
