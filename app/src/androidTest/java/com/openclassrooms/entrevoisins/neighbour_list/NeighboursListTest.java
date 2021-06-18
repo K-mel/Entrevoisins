@@ -67,6 +67,7 @@ public class NeighboursListTest {
 
     /**
      * We ensure that our recyclerview is displaying at least on item
+     * test pour vérifier que la vue principal affiche au moins 1 élément
      */
     @Test
     public void myNeighboursList_shouldNotBeEmpty() {
@@ -77,6 +78,7 @@ public class NeighboursListTest {
 
     /**
      * When we delete an item, the item is no more shown
+     * Test vérifiant qu'au clic sur le bouton de suppression la liste d'utilisateurs compte bien un utilisateur en moins
      */
     @Test
     public void myNeighboursList_deleteAction_shouldRemoveItem() {
@@ -95,6 +97,7 @@ public class NeighboursListTest {
 
     /**
      * Open Activity detail, when click on list element.
+     * Test vérifiant que lorsqu'on clique sur un élément de la liste l'écran détail est bien lancé
      */
     @Test
     public void myNeighboursList_onClickItem_shouldOpenDetailActivity() {
@@ -108,6 +111,7 @@ public class NeighboursListTest {
 
     /**
      * Check if the name in DetailActivity is the same as the item selected.
+     * test vérifiant qu'au démarrage de ce nouvel écran le textView indiquant le nom de l'utilisateur en question est bien rempli
      */
     @Test
     public void detailNeighbourName_onDetailActivity_isCorrect() {
@@ -123,6 +127,7 @@ public class NeighboursListTest {
 
     /**
      * Check if favorite list contain items marked as favorite.
+     * test vérifiant que l'onglet Favoris n'affiche que les voisins marqués comme favoris
      */
     @Test
     public void favoritesList_onFavoriteTab_showFavoriteItems() {

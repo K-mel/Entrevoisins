@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_profile"
@@ -8,11 +9,59 @@
     android:background="@color/bg_grey"
     tools:context=".ui.neighbour_list.ProfileFragment">
 
-    <ScrollView
+    <ImageView
+        android:id="@+id/profile_picture"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-16dp">
+        android:layout_height="250dp"
+        android:src="@drawable/ic_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/profile" />
+
+    <ImageView
+        android:id="@+id/profile_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:contentDescription="@string/retour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="@string/activity_profile_name"
+        android:textColor="#ffffff"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@id/profile_picture"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/profile_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:backgroundTint="@color/wht_background"
+        android:clickable="true"
+        android:contentDescription="@string/star"
+        android:focusable="true"
+        android:src="@drawable/ic_star_border_white_24dp"
+        app:backgroundTint="#9A000000"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_picture"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_picture" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_picture">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,55 +69,9 @@
             android:orientation="vertical">
 
 
-            <ImageView
-                android:id="@+id/profile_picture"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:src="@drawable/ic_account"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/profile" />
-
-            <ImageView
-                android:id="@+id/profile_return"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
-                android:contentDescription="@string/retour"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@android:drawable/ic_menu_revert"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:id="@+id/profile_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
-                android:text="@string/activity_profile_name"
-                android:textColor="#ffffff"
-                android:textSize="32sp"
-                app:layout_constraintBottom_toBottomOf="@id/profile_picture"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/profile_favorite"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
-                android:backgroundTint="@color/wht_background"
-                android:clickable="true"
-                android:contentDescription="@string/star"
-                android:focusable="true"
-                android:src="@drawable/ic_star_border_white_24dp"
-                app:backgroundTint="#9A000000"
-                app:layout_constraintBottom_toTopOf="@id/profile_info"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/profile_picture" />
-
             <android.support.v7.widget.CardView
                 android:id="@+id/profile_info"
-                android:layout_width="361dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/text_margin"
                 app:cardCornerRadius="10dp"
@@ -104,14 +107,14 @@
                             android:id="@+id/img_location"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:contentDescription="@string/location"
                             android:padding="@dimen/appbar_padding_top"
                             android:src="@drawable/ic_location_pink_24dp"
                             android:tint="@color/colorAccent"
                             app:layout_constraintBottom_toTopOf="@id/img_tel"
                             app:layout_constraintRight_toLeftOf="@id/info_location"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:contentDescription="@string/location" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/info_location"
@@ -128,14 +131,14 @@
                             android:id="@+id/img_tel"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:contentDescription="@string/phone"
                             android:padding="@dimen/appbar_padding_top"
                             android:src="@drawable/ic_phone_24dp"
                             android:tint="@color/colorAccent"
                             app:layout_constraintBottom_toTopOf="@id/img_fb"
                             app:layout_constraintRight_toLeftOf="@id/info_tel"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/img_location"
-                            android:contentDescription="@string/phone" />
+                            app:layout_constraintTop_toBottomOf="@id/img_location" />
 
                         <TextView
                             android:id="@+id/info_tel"
@@ -152,14 +155,14 @@
                             android:id="@+id/img_fb"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:contentDescription="@string/internet"
                             android:padding="@dimen/appbar_padding_top"
                             android:src="@drawable/ic_fb_24dp"
                             android:tint="@color/colorAccent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/info_fb"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/img_tel"
-                            android:contentDescription="@string/internet" />
+                            app:layout_constraintTop_toBottomOf="@id/img_tel" />
 
                         <TextView
                             android:id="@+id/info_fb"
@@ -177,7 +180,7 @@
 
             <android.support.v7.widget.CardView
                 android:id="@+id/profile_describe"
-                android:layout_width="367dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/text_margin"
                 app:cardCornerRadius="10dp">

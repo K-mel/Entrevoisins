@@ -28,12 +28,16 @@ public class NeighbourServiceTest {
         service = DI.getNewInstanceApiService();
     }
 
+    //Test pour vérifier que la liste des voisins apparait bien sur la liste principale.
+
     @Test
     public void getNeighboursWithSuccess() {
         List<Neighbour> neighbours = service.getNeighbours();
         List<Neighbour> expectedNeighbours = DummyNeighbourGenerator.DUMMY_NEIGHBOURS;
         assertThat(neighbours, IsIterableContainingInAnyOrder.containsInAnyOrder(expectedNeighbours.toArray()));
     }
+
+    // Test supprimer 1 voisin de la liste principale
 
     @Test
     public void deleteNeighbourWithSuccess() {
@@ -42,7 +46,7 @@ public class NeighbourServiceTest {
         assertFalse(service.getNeighbours().contains(neighbourToDelete));
     }
 
-    //Test pour la liste des favoris ajout/retrait/affichage
+    //Test pour vérifier que la liste des favoris n'est pas vide
 
     @Test
     public void getListFavNeighbourNotEmpty() {
@@ -51,12 +55,17 @@ public class NeighbourServiceTest {
         assertFalse(service.getFavoriteNeighbour().isEmpty());
     }
 
+
+    // Test pour ajouter un voisin dans la liste des favoris
+
     @Test
     public void addNeighbourToFavoriteWithSuccess(){
         Neighbour neighbouradd = service.getNeighbours().get(0);
         service.addFavorite(neighbouradd);
         assertTrue(service.getFavoriteNeighbour().contains(neighbouradd));
     }
+
+    //Test pour supprimer un voisin de la liste des favoris
 
     @Test
     public void removeNeighbourToFavoriteWithSuccess(){

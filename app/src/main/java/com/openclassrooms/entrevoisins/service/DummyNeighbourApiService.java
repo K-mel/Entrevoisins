@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * Dummy mock for the Api
+ * Mock factice pour l'Api
  */
 public class DummyNeighbourApiService implements  NeighbourApiService {
 
